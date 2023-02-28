@@ -58,12 +58,15 @@ public class SampleClass {
     //    implement a custom .equals(SampleClass other){} method here.
         @Override
         public boolean equals(Object c){
-            if (c != this)
-                return false;
-            if (!(c instanceof SampleClass))
-                return false;
-            
-            return true;
+            if (c == this)
+                return true;
+            if ((c instanceof SampleClass))
+            {
+                SampleClass d = (SampleClass)c;
+                if (this.a == d.a && (this.b == d.b))
+                    return true;
+            }
+            return false;
         }
 
 
